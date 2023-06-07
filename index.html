@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website</title>
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
+          href="index.html"
+        >
+          <img src="./images/store-solid-24.png" alt="" />
+          <span class="text-uppercase fw-lighter ms-2">Bridal Boutique</span>
+        </a>
+
+        <div class="order-lg-2 nav-btns">
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-shopping-cart"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >5</span
+            >
+          </button>
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-heart"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >6</span
+            >
+          </button>
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-search"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >4</span
+            >
+          </button>
+        </div>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-uppercase text-dark" href="#header"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-3 py-2">
+              <a class="nav-link text-uppercase text-dark" href="#blogs"
+                >Collection</a
+              >
+            </li>
+            <li class="nav-item px-3 py-2">
+              <a class="nav-link text-uppercase text-dark" href="#special"
+                >Specials</a
+              >
+            </li>
+            <li class="nav-item px-3 py-2">
+              <a class="nav-link text-uppercase text-dark" href="#offers">Blog</a>
+            </li>
+            <li class="nav-item px-3 py-2">
+              <a class="nav-link text-uppercase text-dark" href="#about"
+                >About us</a
+              >
+            </li>
+            <li class="nav-item px-3 py-2 border-0">
+              <a class="nav-link text-uppercase text-dark" href="#popular"
+                >Popular</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- header  -->
+    <header
+      id="header"
+      class="vh-100 carousel slide"
+      data-bs-ride="carousel"
+      style="padding-top: 104px"
+    >
+      <div class="container h-100 d-flex align-items-center carousel-inner">
+        <div class="text-center carousel-item active">
+          <h2 class="text-capitalize text-white">best collection</h2>
+          <h1 class="text-uppercase py-2 fw-bold text-white">new arrivals</h1>
+          <a href="#" class="btn mt-3 text-uppercase">shop now</a>
+        </div>
+        <div class="text-center carousel-item">
+          <h2 class="text-capitalize text-white">best price & offer</h2>
+          <h1 class="text-uppercase py-2 fw-bold text-white">new season</h1>
+          <a href="#" class="btn mt-3 text-uppercase">buy now</a>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#header"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#header"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </header>
+    <!-- end of header -->
+
+    <!-- collection -->
+    <section id="collection" class="py-5">
+      <div class="container">
+        <div class="title text-center">
+          <h2 class="position-relative d-inline-block">New Collection</h2>
+        </div>
+
+        <div class="row g-0">
+          <div
+            class="d-flex flex-wrap justify-content-center mt-5 filter-button-group"
+          >
+            <button
+              type="button"
+              class="btn m-2 text-dark active-filter-btn"
+              data-filter="*"
+            >
+              All
+            </button>
+            <button type="button" class="btn m-2 text-dark" data-filter=".best">
+              Best Sellers
+            </button>
+            <button type="button" class="btn m-2 text-dark" data-filter=".feat">
+              Featured
+            </button>
+            <button type="button" class="btn m-2 text-dark" data-filter=".new">
+              New Arrival
+            </button>
+          </div>
+
+          <div class="collection-list mt-4 row gx-0 gy-3">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="collection-img position-relative">
+                <img src="images/img5.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Mermaid</p>
+                <span class="fw-bold">$ 4550</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div class="collection-img position-relative">
+                <img src="images/img2.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Wonderland</p>
+                <span class="fw-bold">$ 2050</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+              <div class="collection-img position-relative">
+                <img src="images/img3.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Empire</p>
+                <span class="fw-bold">$ 3000</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="collection-img position-relative">
+                <img src="images/img63.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Monaco</p>
+                <span class="fw-bold">$ 5000</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div class="collection-img position-relative">
+                <img src="images/img31.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Mermaid</p>
+                <span class="fw-bold">$ 4000</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+              <div class="collection-img position-relative">
+                <img src="images/img7.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Paris</p>
+                <span class="fw-bold">$ 4000</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="collection-img position-relative">
+                <img src="images/pic8.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Cinderella Shoes</p>
+                <span class="fw-bold">$ 2800</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div class="collection-img position-relative">
+                <img src="images/pic111.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Berta</p>
+                <span class="fw-bold">$ 6400</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+              <div class="collection-img position-relative">
+                <img src="images/pic15.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">London</p>
+                <span class="fw-bold">$ 4600</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="collection-img position-relative">
+                <img src="images/pic6.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Sheath</p>
+                <span class="fw-bold">$ 7800</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div class="collection-img position-relative">
+                <img src="images/pic1.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Marguerite Dress</p>
+                <span class="fw-bold">$ 8000</span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+              <div class="collection-img position-relative">
+                <img src="images/img9.avif" class="w-100" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+              </div>
+              <div class="text-center">
+                <div class="rating mt-3">
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                  <span class="text-primary"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="text-capitalize my-1">Anya</p>
+                <span class="fw-bold">$ 7000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of collection -->
+
+    <!-- special products -->
+    <section id="special" class="py-5">
+      <div class="container">
+        <div class="title text-center py-5">
+          <h2 class="position-relative d-inline-block">Special Selection</h2>
+        </div>
+
+        <div class="special-list row g-0">
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="special-img position-relative overflow-hidden">
+              <img src="images/img40.avif" alt="/" class="w-100" />
+              <span
+                class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+              >
+                <i class="fas fa-heart"></i>
+              </span>
+            </div>
+            <div class="text-center">
+              <p class="text-capitalize mt-3 mb-1">Sweetheart Dress S2</p>
+              <span class="fw-bold d-block">$ 6000</span>
+              <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of special products -->
+
+    <!-- blog -->
+    <section id="offers" class="py-5">
+      <div class="container">
+        <div
+          class="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start"
+        >
+          <div class="offers-content">
+            <span class="text-black-100">Discount Up To 40%</span>
+            <h2 class="mt-2 mb-4 text-black">Grand Sale Offer!</h2>
+            <a href="#" class="btn">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of blog -->
+
+    <!-- blogs -->
+    <section id="blogs" class="py-5">
+      <div class="container">
+        <div class="title text-center py-5">
+          <h2 class="position-relative d-inline-block">Our Latest Blog</h2>
+        </div>
+
+        <div class="row g-3">
+          <div class="card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+            <img src="./images/rome.avif" alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                What to Do on a Romantic Honeymoon in Rome, Italy
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                Following your nuptials, what could be more romantic than experiencing la dolce vita in Italy’s capital city, where time appears to stand still and cobblestone streets will lead you to awe-inspiring locations both old and new. From its magnificent parks and gardens, to panoramic views overlooking historical buildings, villas, and monuments, to world-renowned ancient sites and architectural landmarks, Rome has it all. It’s no wonder the city has captured the hearts of locals and travelers from across the world for centuries.
+
+                With direct flights to Rome’s Fiumicino Leonardo da Vinci Airport (FCO) from many major cities in the United States, traveling to this magical place for your honeymoon is relatively easy. Once you arrive, simply take the Leonardo Express train to the Termini Station nearby many hotels in the city centre, or opt for a fixed-fare taxi or private car transport to your hotel. 
+                
+                As soon as you step foot in the heart of the Eternal City, explore as you wish. With history at every corner, your itinerary will surely guide you through spectacular squares and architectural sites, palatial monuments and museums, and of course, outstanding Italian wines and cuisine from both fine ristoranti and more-casual trattorias.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">
+                  <span class="fw-bold">Author: </span>Agostina Boris
+                </small>
+              </p>
+              <a href="#" class="btn">Read More</a>
+            </div>
+          </div>
+
+          <div class="card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+            <img src="./images/img14.avif" class="w-100" alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                How to Choose Flowers for Your Wedding Date & Season
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                In addition to great food, drinks, and entertainment, most couples choose to focus the majority of the spending limit for their wedding on stunning florals throughout the festivities. A spectacular flower design has the ability to transform a space into a romantic, fragrant, and magical setting that will set the tone for the special celebration and wow brides, grooms, and their guests. 
+
+                Depending on the style, location, and aesthetic of your nuptials, an expert florist and event designer will offer recommendations to illustrate your wedding vision in floral form. They’ll also take into account your individual wedding date and the season you’ll say “I do” to find the perfect blossoms that are available around the world to fit your desired look. 
+              </p>
+              <p class="card-text">
+                <small class="text-muted">
+                  <span class="fw-bold">Author: </span>Agostina Boris
+                </small>
+              </p>
+              <a href="#" class="btn">Read More</a>
+            </div>
+          </div>
+
+          <div class="card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+            <img src="./images/pic73.avif"  alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                From DJs to Fireworks: The Best Wedding Entertainment Ideas to Consider
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                Your wedding day is a time to celebrate love and an opportunity to throw a party that your guests will never forget. The reception is the perfect time to let your hair down and have some fun with your loved ones. And coming up with wedding entertainment ideas that keep the atmosphere lively and gets everyone on the dance floor is crucial.
+
+                That’s why we have compiled a list of the best wedding entertainment ideas to make your special day even more fun and unforgettable. From photo booths to live bands and DJs, choose the one (or more!) that best suits your style and personality and take your celebration to the next level!
+              </p>
+              <p class="card-text">
+                <small class="text-muted">
+                  <span class="fw-bold">Author: </span>Agostina Boris
+                </small>
+              </p>
+              <a href="#" class="btn">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of blogs -->
+
+    <!-- about us -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row gy-lg-5 align-items-center">
+          <div class="col-lg-6 order-lg-1 text-center">
+            <div class="title pt-3 pb-5">
+              <h2 class="position-relative d-inline-block ms-4">About us</h2>
+            </div>
+            <p class="lead text-muted">
+              Who We Are </p>
+            <p>i there! Welcome to Brides, where every couple, every wedding, and every love is celebrated. Whether you are a soon-to-be-wed, newlywed, wedding party member, or guest, we are so excited to be on this journey with you.
+
+              A bit about us: We’ve been around for 87 years and counting, making us the most seasoned wedding publication in the United States. However, we didn’t always carry the name Brides. When we printed our first pages in 1934, the title was So You’re Going to Be Married. About 25 years later, that turned into The Bride’s Magazine, which was then shortened to Bride’s. Eventually, we dropped the apostrophe and said “I do” to the name we all know and love today: Brides. 
+    
+              At Brides, we also believe there is no better way to find wedding inspiration than to look at how real couples tie the knot. That’s why we regularly highlight the love stories and nuptials of couples across the globe through our Real Weddings. With features like this boho beach wedding featuring a flash mob, this traditional Indian celebration with modern touches, or this elegant Nantucket affair with a martini tower, you’ll find countless photos, ideas, and tried-and-true advice from newlyweds in every story. Interested in submitting your own Real Wedding? Click here to learn how.
+              
+              But enough about us: Your wedding is all about you and your true love. We can’t wait to guide you to the big day and provide endless advice and inspiration along the way. Now let’s get you married! 
+            </p>
+          </div>
+          <div class="col-lg-6 order-lg-0">
+            <img src="./images/work.avif" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of about us -->
+
+    <!-- Popular -->
+    <section id="popular" class="py-5">
+        <div class="container">
+            <div class="title text-center pt-3 pb-5">
+                <h2 class="position-relative d-inline-block">Popular Of This Year</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-lg-4 row g-3">
+                <h3 class="fs-5">Top Rated</h3>
+                <div class="d-flex align-items-start justify-content-start">
+                  <img src="./images/img7.avif" alt="" class="img-fluid pe-3 w-25">
+                  <div>
+                    <p class="mb-0">Paris Dress</p>
+                    <span>$2000</span>
+                  </div>
+                </div>
+
+
+                <div class="d-flex align-items-start justify-content-start">
+                    <img src="./images/img5.avif" alt="" class="img-fluid pe-3 w-25">
+                    <div>
+                      <p class="mb-0">Mermaid</p>
+                      <span>$4000</span>
+                    </div>
+                  </div>
+                
+                    <div class="d-flex align-items-start justify-content-start">
+                      <img src="./images/pic9.avif" alt="" class="img-fluid pe-3 w-25">
+                      <div>
+                        <p class="mb-0">Strapless</p>
+                        <span>$3500</span>
+                      </div>
+                    </div>
+                    </div>
+                    
+
+                      <div class="col-md-6 col-lg-4 row g-3">
+                        <h3 class="fs-5">Best Sellers</h3>
+                        <div class="d-flex align-items-start justify-content-start">
+                          <img src="./images/img3.avif" alt="" class="img-fluid pe-3 w-25">
+                          <div>
+                            <p class="mb-0">Empire Dress</p>
+                            <span>$6000</span>
+                          </div>
+                        </div>
+        
+        
+                        <div class="d-flex align-items-start justify-content-start">
+                            <img src="./images/img7.avif" alt="" class="img-fluid pe-3 w-25">
+                            <div>
+                              <p class="mb-0">Paris Dress</p>
+                              <span>$2000</span>
+                            </div>
+                          </div>
+                        
+                            <div class="d-flex align-items-start justify-content-start">
+                              <img src="./images/img8.avif" alt="" class="img-fluid pe-3 w-25">
+                              <div>
+                                <p class="mb-0">Roses</p>
+                                <span>$3300</span>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 row g-3">
+                      <h3 class="fs-5">On Sale</h3>
+                      <div class="d-flex align-items-start justify-content-start">
+                        <img src="./images/img29.avif" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                          <p class="mb-0">Wedding Flowers</p>
+                          <span>$600</span>
+                        </div>
+                      </div>
+      
+      
+                      <div class="d-flex align-items-start justify-content-start">
+                          <img src="./images/pioc3.avif" alt="" class="img-fluid pe-3 w-25">
+                          <div>
+                            <p class="mb-0">Wedding Shoes</p>
+                            <span>$4800</span>
+                          </div>
+                        </div>
+                      
+                          <div class="d-flex align-items-start justify-content-start">
+                            <img src="./images/img1.avif" alt="" class="img-fluid pe-3 w-25">
+                            <div>
+                              <p class="mb-0">Sheath</p>
+                              <span>$5000</span>
+                            </div>
+                      </div>
+                  </div>
+                </div>
+    </section>
+    <!-- end of popular -->
+
+    <!-- newsletter -->
+    <section id="newsletter" class="py-5">
+      <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+          <div class="title text-center pt-3 pb-5">
+            <h2 class="position-relative d-inline-block ms-4">Newsletter Subscription</h2>
+          </div>
+
+          <p class="text-center text-muted">Join us!</p>
+          <div class="input-group mb-3 mt-3">
+            <input type="text" class="form-control" placeholder="Enter Your Email Here">
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of newsletter -->
+
+    <!-- footer -->
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row text-white g-4">
+          <div class="col-md-6 col-lg-3">
+            <a class="text-uppercase text-decoration-none brand text-white" href="index.html">Tiziana</a>
+            <p class="text-white text-muted mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, blanditiis!</p>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-lig">Links</h5>
+            <ul class="list-unstyled">
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none text-muted">
+                  <i class="fas fa-chevron-right me-1">Home</i>
+                </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none text-muted">
+                  <i class="fas fa-chevron-right me-1">Collection</i>
+                </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none text-muted">
+                  <i class="fas fa-chevron-right me-1">Blogs</i>
+                </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none text-muted">
+                  <i class="fas fa-chevron-right me-1">About Us</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Contact Us</h5>
+            <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+              <span class="me-3">
+                <i class="fas fa-map-marked-alt"></i>
+              </span>
+              <span class="fw-light">
+                Albert Street, New York, AS 756, United States of America.
+              </span>
+            </div>
+
+            <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+              <span class="me-3">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="fw-light">
+                Bridalboutique.support@gmail.com
+              </span>
+            </div>
+
+            <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+              <span class="me-3">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <span class="fw-light">
+                +9786 6776 263
+              </span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Follow us</h5>
+            <div class="d-flex">
+              <ul class="list-unstyled d-flex">
+                <li>
+                  <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class="fab fa-pinterest"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- end of footer -->
+
+
+
+
+
+
+
+    <!-- jquery -->
+    <script src="./js/jquery-3.7.0.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
